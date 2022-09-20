@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-xlg navbar-dark  justify-content-between " style="background-color: black;">
+        <a class="navbar-brand"   >
+            <i class="fa-brands fa-github" style="padding: 2px;"></i>
+            Git-Hub
+          </a>
+          <form class="form-inline p-2px" (submit)=searchUser()>
+            <input [(ngModel)]="githubUserQuery" name="user"  size="40" class="form-control pr-4px mr-sm-2 " type="search" placeholder="username" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      </nav>
+      
+    </body>
+   
+    </html>
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-loader" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<app-profile [githubprofile]="githubprofile"></app-profile>
+
+<app-repo [githubrepos]="githubrepos"></app-repo>
+<app-footer [githubrepos]="githubrepos"></app-footer>
+

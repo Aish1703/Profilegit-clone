@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    
+  }
+  .page{
+    justify-content:center; 
+  }
+  .pagination{
+    padding: 30px 30%;
+    justify-content:center;
+  }
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: #808080;
+    margin: 50px ;
+  }
+  
+  .next {
+    background-color: #f1f1f1;
+    color: #00bfff;
+    margin: 50px ;
+  }
+  
+  .round {
+    border-radius: 40%;
+  }
+  
+
+  

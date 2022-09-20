@@ -1,0 +1,37 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div *ngIf="githubrepos" class="container profile-page">
+    <div class="row">
+        <div class="col-xl-6 col-lg-7 col-md-12">
+            <div class="card profile-header">
+                <div class="body">
+                    
+                <div class="column"> 
+                    <div *ngFor="let repos of githubrepos |paginate:{itemsPerPage:2,currentPage: page, totalItems: length}" class="repospad" >
+                        <!-- <div *ngIf="even"> -->
+                            <div class="rowe col-sm-12 rs" >
+                                <a [href]="repos.html_url" class="m-t-0 m-b-0"><strong>{{repos.name}}</strong></a>
+                                <p>{{repos.description}}</p>
+                                    <a *ngIf="repos.language" class="lan round">{{repos.language}}</a>
+                                
+                            </div> 
+                            <!-- <div class="rowe col-lg-6 rs" >
+                                <a [href]="githubrepos[i+1].html_url" class="m-t-0 m-b-0"><strong>{{githubrepos[i+1].name}}</strong></a>
+                                <p>{{githubrepos[i+1].description}}</p>
+                                    <a class="lan round">{{githubrepos[i+1].language}}</a>
+                                
+                            </div>  -->
+                        <!-- </div> -->
+                                    
+                    </div>
+                   <div class="pg">
+                    <pagination-controls class=" text-centre " (pageChange)="page=$event"></pagination-controls>
+                   </div>
+                </div> 
+            </div>                    
+            </div>
+        </div>
+        
+        
+        
+	</div>
+</div>
